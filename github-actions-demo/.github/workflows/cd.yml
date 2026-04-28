@@ -1,8 +1,8 @@
-name: TWS CD Workflow
+name: CD Workflow
 
 on: 
     workflow_run:
-        workflows: ["TWS CI Workflow"] 
+        workflows: ["CI Workflow"] 
         types: [completed]
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   script: |
-                    git clone https://github.com/LondheShubham153/github-actions-demo.git
+                    git clone https://github.com/het0p7/Github-actions.git
                     cd ~/github-actions-demo
                     git pull origin main
                     docker compose pull
