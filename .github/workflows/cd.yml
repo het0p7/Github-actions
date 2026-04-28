@@ -21,5 +21,5 @@ jobs:
                     git clone https://github.com/het0p7/Github-actions.git
                     cd ~/Github-actions
                     git pull origin main
-                    docker compose pull
-                    docker compose down && docker compose up -d
+                    docker-compose pull
+                    docker-compose down && docker-compose up -d
