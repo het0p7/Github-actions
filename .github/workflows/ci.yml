@@ -10,16 +10,15 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Set up Go
-              uses: actions/setup-go@v5
+            - name: Set up Python
+              uses: actions/setup-python@v5
               with:
-                go-version: '1.21' # Adjust based on project requirements
-                cache-dependency-path: backend/go.sum
+                python-version: '3.10'
 
             - name: Run Tests
               run: |
                 cd backend
-                go test -v ./...
+                python test_logic.py
 
     build-and-push:
         needs: test
