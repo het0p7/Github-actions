@@ -19,7 +19,7 @@ jobs:
                   key: ${{ secrets.EC2_SSH_KEY }}
                   script: |
                     git clone https://github.com/het0p7/Github-actions.git
-                    cd ~/github-actions-demo
+                    cd ~/Github-actions
                     git pull origin main
                     docker compose pull
                     docker compose down && docker compose up -d
