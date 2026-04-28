@@ -22,7 +22,8 @@ services:
 
   # Go Backend API
   backend:
-    image: ${DOCKERHUB_USERNAME}/skillpulse-backend:shyam
+    build: ./backend
+    image: skillpulse-backend:latest
     restart: unless-stopped
     environment:
       DB_HOST: db
